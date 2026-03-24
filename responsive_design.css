@@ -1,0 +1,199 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: gray;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 100px;
+}
+
+.container {
+    display: grid;
+    gap: 40px;
+
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.products {
+    background-color: rgb(183, 176, 176);
+    height: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 60px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 80px;
+}
+
+.opciones-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    padding-left: 10px;
+}
+
+.opciones-navbar {
+    padding-right: 10px;
+}
+
+.top-products {
+    padding: 10px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:"uno dos tres"
+                        "cuatro cinco tres";
+    gap: 10px;
+}
+
+.top-product {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-product-1 {
+    grid-area: uno;
+}
+
+.top-product-2 {
+    grid-area: dos;
+}
+
+.top-product-3 {
+    grid-area: tres;
+}
+
+.top-product-4 {
+    grid-area: cuatro;
+}
+
+.top-product-5 {
+    grid-area: cinco;
+}
+
+.product {
+    border: 1px solid black;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-catalogo {
+    padding: 10px;
+    display: grid;
+    min-height: 1000px;
+    height: auto;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+}
+
+/* Ctrl + shift + A  para comentar */
+/* Media queries 
+Se hará responsive solo para 3 dispositivos:
+teléfono, tablet y computadora.
+*/
+
+/* @media tipo-de-medio and (max-width:767px) {
+  /* Estilos CSS aquí */
+
+@media screen and (max-width:1024px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    .top-products {
+        height: 800px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:"uno dos"
+                            "tres tres"
+                            "cuatro cinco";
+    }
+
+    .top-product-1 {
+        grid-area: uno;
+    }
+
+    .top-product-2 {
+        grid-area: dos;
+    }
+
+    .top-product-3 {
+        grid-area: tres;
+    }
+
+    .top-product-4 {
+        grid-area: cuatro;
+    }
+
+    .top-product-5 {
+        grid-area: cinco;
+    }
+
+    .products-catalogo {
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media screen and (max-width:767px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .top-products {
+        height: 1100px;
+    }
+
+    .products-catalogo {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .product {
+        height: 650px;
+    }
+
+}
